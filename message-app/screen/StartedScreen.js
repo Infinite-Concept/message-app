@@ -1,13 +1,18 @@
-import { StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, TouchableOpacity, View, Dimensions } from 'react-native'
 import React from 'react'
 import Logo from "../common/assets/Logo"
 
+const widthScreen = Dimensions.get('window').width - 35
+const width = Dimensions.get('window').width * 1.83
+const height = Dimensions.get('window').height * 1
+
 const StartedScreen = ({navigation}) => {
+  
   return (
     <View style={styles.started}>
         <StatusBar />
       <View style={styles.Imgae}>
-        <Logo />
+        <Logo width={width} height={height} />
       </View>
 
       <View style={styles.content}>
@@ -28,14 +33,16 @@ const styles = StyleSheet.create({
     started: {
         flex: 1,
         backgroundColor: "#4A3F69",
+        position: "relative",
     },
     Imgae: {
         width: "100%",
-        left: -150,
-        top: -50
+        left: -149,
+        top: -130
     },
     content: {
-        top: -150,
+      position: "absolute",
+        bottom: 15,
         paddingHorizontal: 15
     },
     contentText: {
@@ -48,7 +55,8 @@ const styles = StyleSheet.create({
       backgroundColor: "#ffffff",
       paddingVertical: 15,
       borderRadius: 10,
-      marginTop: 20
+      marginTop: 20,
+      width: widthScreen
     },
     btnText: {
       color: "#4A3F69",

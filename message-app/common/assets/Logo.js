@@ -1,13 +1,13 @@
 import * as React from "react"
 import Svg, { Defs, G, Path } from "react-native-svg"
 /* SVGR has dropped some elements not supported by react-native-svg: style */
-const SvgComponent = (props) => (
+const SvgComponent = ({props, width, height}) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     fill="#fff"
-    width="658mm"
-    height="535mm"
+    width={width}
+    height={height}
     style={{
       shapeRendering: "geometricPrecision",
       textRendering: "geometricPrecision",

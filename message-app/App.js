@@ -7,6 +7,8 @@ import LoadingScreen from './screen/LoadingScreen';
 import StartedScreen from './screen/StartedScreen';
 import { useFonts } from 'expo-font';
 import SignupScreen from './screen/SignupScreen';
+import ConfirmationScreen from './screen/ConfirmationScreen';
+import CreateProfileScreen from './screen/CreateProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +30,9 @@ const App = () => {
         <Stack.Screen name="Loading" component={LoadingScreen} />
         <Stack.Screen name="Started" component={StartedScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Screen name="Confirmation" component={ConfirmationScreen} />
+        <Stack.Screen name="CreateProfile" component={CreateProfileScreen} />
+
 
       </Stack.Navigator>
     </NavigationContainer>
