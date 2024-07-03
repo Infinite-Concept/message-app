@@ -58,12 +58,12 @@ const ConfirmationScreen = () => {
       </View>
 
       <TouchableOpacity style={styles.submit} onPress={() => handleSubmit()}>
-            <View style={styles.submitButton}>
-                <View style={styles.submitButtonMove}>
-                    <Arrow color="#4A3F69" />
-                </View>
-            </View>
-        </TouchableOpacity>
+        <View style={styles.submitButton}>
+          <View style={styles.submitButtonMove}>
+              <Arrow color="#4A3F69" />
+          </View>
+        </View>
+      </TouchableOpacity>
     </View>
   )
 }

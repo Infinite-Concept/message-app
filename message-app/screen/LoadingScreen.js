@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
 import React, { useEffect } from 'react'
 import Logo from "../common/assets/Logo"
+import { useNavigation } from '@react-navigation/native'
 
-const LoadingScreen = ({navigation}) => {
+const LoadingScreen = () => {
+
+  const navigation = useNavigation()
 
   useEffect(() => {
     let nav = setTimeout(() => {
