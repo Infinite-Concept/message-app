@@ -3,8 +3,11 @@ import React from 'react'
 import Write from "../common/assets/Write"
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import img1 from "../assets/image/img1.png"
+import { useNavigation } from '@react-navigation/native';
 
 const ChatScreen = () => {
+  const navigation = useNavigation()
+
   return (
     <View style={styles.home}>
       <ScrollView style={styles.homeContainer}>
@@ -54,7 +57,7 @@ const ChatScreen = () => {
 
       </ScrollView>
 
-      <TouchableOpacity style={styles.submit} >
+      <TouchableOpacity style={styles.submit} activeOpacity={0.8} onPress={() => navigation.navigate("SelectContact")} >
         <View style={styles.submitButton}>
           <Write />
         </View>

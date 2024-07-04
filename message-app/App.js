@@ -17,6 +17,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import Update from "./assets/icon/update.png"
 import UpdateActive from "./assets/icon/updateActive.png"
+import SelectContactScreen from './screen/SelectContactScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -91,6 +92,7 @@ const App = () => {
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Confirmation" component={ConfirmationScreen} />
         <Stack.Screen name="CreateProfile" component={CreateProfileScreen} />
+        <Stack.Screen name="SelectContact" component={SelectContactScreen} />
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
