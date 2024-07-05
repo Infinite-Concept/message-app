@@ -81,7 +81,7 @@ router.post("/checkUser", async(req, res) => {
     try {
         const {phoneNumber} = req.body
         const users = await User.find({phoneNumber: { $in: phoneNumber }})
-        console.log(await User.find());
+        
         if (users.length > 0) {
             // At least one user found with matching phone number
             console.log(users);
